@@ -1,0 +1,17 @@
+.App {
+  display: grid;
+  grid-template-columns: [first] 1fr [second] 1fr [third] 1fr [fourth] 1fr [last];
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.App button {
+  padding: 2rem;
+  grid-column: auto;
+}
+
+.App input {
+  width: 100%;
+  grid-column: first / last;
+  padding-right: .3em;
+  text-align: right;
+}
