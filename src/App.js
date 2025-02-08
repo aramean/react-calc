@@ -2,23 +2,23 @@ import { useState } from 'react'
 import './App.css';
 
 function App() {
-  const [test, setTest] = useState('0');
+  const [display, setDisplay] = useState('0');
 
   const handleClick = (val) => {
-    setTest(!val ? '0' : (prev => (prev === '0' ? '' : prev) + val));
+    setDisplay(!val ? '0' : (prev => (prev === '0' ? '' : prev) + val));
   }
 
   const handleCalc = () => {
     try{
-      setTest(eval(test));
+      setDisplay(eval(display));
     }catch(e) {
-      setTest('ERROR?')
+      setDisplay('ERROR?')
     }
   }
 
   return (
     <div className="App">
-      <input type="text" value={test} readOnly></input>
+      <input type="text" value={display} readOnly></input>
 
       <button class="first" onClick={() => handleClick()}>AC</button>
       <button class="first" onClick={() => handleClick(7)}>7</button>
