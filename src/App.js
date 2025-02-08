@@ -35,8 +35,6 @@ function App() {
       <button class="last" onClick={() => handleClick('-')}>-</button>
       <button class="last" onClick={() => handleClick('+')}>+</button>
       <button class="last" onClick={() => handleClick('=')}>=</button>
-
-      
     </div>
   );
 }

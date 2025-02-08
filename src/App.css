@@ -3,12 +3,15 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas: "first second third last";
   grid-auto-flow: dense;
-  gap: 2px;
+  gap: 3px;
+  max-width: 600px;
+  min-height: 400px;
+  margin: 0 auto auto;
 }
 
 button {
-  padding: 1.3rem;
-  grid-column: first;
+  padding: 1.5vh;
+  border: 0;
 }
 
 button:hover {
@@ -16,10 +19,15 @@ button:hover {
   cursor: pointer;
 }
 
+button:active {
+  transform: scaleX(99%);
+  transform: scaleY(99%);
+}
+
 input {
   width: 100%;
   grid-column: first / last;
-  padding-right: .3em;
+  padding: .3em;
   text-align: right;
 }
 
