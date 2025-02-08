@@ -1,17 +1,49 @@
 .App {
   display: grid;
-  grid-template-columns: [first] 1fr [second] 1fr [third] 1fr [fourth] 1fr [last];
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "first second third last";
+  grid-auto-flow: dense;
+  gap: 2px;
 }
 
-.App button {
-  padding: 2rem;
-  grid-column: auto;
+button {
+  padding: 1.3rem;
+  grid-column: first;
 }
 
-.App input {
+button:hover {
+  background-color: rgba(255, 255, 255, .8);
+  cursor: pointer;
+}
+
+input {
   width: 100%;
   grid-column: first / last;
   padding-right: .3em;
   text-align: right;
+}
+
+input:hover {
+  cursor: default;
+}
+
+button.first {
+  grid-column: first;
+}
+
+button.second {
+  grid-column: second;
+}
+
+button.third {
+  grid-column: third;
+}
+
+button.last {
+  background-color: orange;
+  grid-column: last;
+}
+
+button.last:hover {
+  background-color: rgba(255, 199, 149, 1);
 }

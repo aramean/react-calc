@@ -11,16 +11,32 @@ function App() {
   return (
     <div className="App">
       <input type="text" value={test} readOnly></input>
-      <button onClick={() => handleClick()}>C</button>
-      <button onClick={() => handleClick(9)}>9</button>
-      <button onClick={() => handleClick(8)}>8</button>
-      <button onClick={() => handleClick(7)}>7</button>
-      <button onClick={() => handleClick(6)}>6</button>
-      <button onClick={() => handleClick(5)}>5</button>
-      <button onClick={() => handleClick(4)}>4</button>
-      <button onClick={() => handleClick(3)}>3</button>
-      <button onClick={() => handleClick(2)}>2</button>
-      <button onClick={() => handleClick(1)}>1</button>
+
+      <button class="first" onClick={() => handleClick()}>C</button>
+      <button class="first" onClick={() => handleClick(7)}>7</button>
+      <button class="first" onClick={() => handleClick(4)}>4</button>
+      <button class="first" onClick={() => handleClick(1)}>1</button>
+      <button class="first"></button>
+
+      <button class="second"></button>
+      <button class="second" onClick={() => handleClick(8)}>8</button>
+      <button class="second" onClick={() => handleClick(5)}>5</button>
+      <button class="second" onClick={() => handleClick(2)}>2</button>
+      <button class="second"></button>
+
+      <button class="third"></button>
+      <button class="third" onClick={() => handleClick(9)}>9</button>
+      <button class="third" onClick={() => handleClick(6)}>6</button>
+      <button class="third" onClick={() => handleClick(3)}>3</button>
+      <button class="third"></button>
+
+      <button class="last" onClick={() => handleClick('÷')}>÷</button>
+      <button class="last" onClick={() => handleClick('*')}>×</button>
+      <button class="last" onClick={() => handleClick('-')}>-</button>
+      <button class="last" onClick={() => handleClick('+')}>+</button>
+      <button class="last" onClick={() => handleClick('=')}>=</button>
+
+      
     </div>
   );
 }
