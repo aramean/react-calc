@@ -8,11 +8,19 @@ function App() {
     setTest(!val ? '0' : (prev => (prev === '0' ? '' : prev) + val));
   }
 
+  const handleCalc = () => {
+    try{
+      setTest(eval(test));
+    }catch(e) {
+      setTest('ERROR?')
+    }
+  }
+
   return (
     <div className="App">
       <input type="text" value={test} readOnly></input>
 
-      <button class="first" onClick={() => handleClick()}>C</button>
+      <button class="first" onClick={() => handleClick()}>AC</button>
       <button class="first" onClick={() => handleClick(7)}>7</button>
       <button class="first" onClick={() => handleClick(4)}>4</button>
       <button class="first" onClick={() => handleClick(1)}>1</button>
@@ -30,11 +38,11 @@ function App() {
       <button class="third" onClick={() => handleClick(3)}>3</button>
       <button class="third"></button>
 
-      <button class="last" onClick={() => handleClick('÷')}>÷</button>
+      <button class="last" onClick={() => handleClick('/')}>÷</button>
       <button class="last" onClick={() => handleClick('*')}>×</button>
       <button class="last" onClick={() => handleClick('-')}>-</button>
       <button class="last" onClick={() => handleClick('+')}>+</button>
-      <button class="last" onClick={() => handleClick('=')}>=</button>
+      <button class="last" onClick={() => handleCalc()}>=</button>
     </div>
   );
 }
