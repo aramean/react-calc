@@ -2,42 +2,55 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [display, setDisplay] = useState('0')
+  const [memory, setMemory] = useState('0')
   const [reset, setReset] = useState(false)
 
   const handleNumber = (val) => {
     if (reset) {
-      setDisplay(val)
+      setMemory(val)
       setReset(false)
     } else {
-      setDisplay(prev => (prev === '0' ? '' : prev) + val.toString())
+      setMemory(prev => (prev === '0' ? '' : prev) + String(val))
     }
   }
 
   const handleComma = () => {
-    setDisplay(display + '.')
+    setMemory(memory + '.')
   }
 
   const handleArithmetic = (val) => {
-    setDisplay(display + val.toString())
+    setMemory(memory + String(val))
   }
 
   const handleCalculation = () => {
     try {
-      setDisplay(eval(display))
+      setMemory(eval(memory))
       setReset(true)
     } catch (e) {
-      setDisplay('ERROR?')
+      setMemory('ERROR?')
     }
   }
 
   const handleReset = () => {
-    setDisplay('0')
+    setMemory('0')
+  }
+
+  const handleDisplay = (memory) => {
+    const replacements = [
+      { search: '.', replace: ',' },
+      { search: '*', replace: '×' },
+      { search: '+', replace: '+' },
+      { search: '-', replace: '-' },
+      { search: '/', replace: '÷' },
+    ]
+
+    return replacements.reduce(
+      (str, { search, replace }) => str.replaceAll(search, replace), String(memory))
   }
 
   return (
     <div className="App">
-      <input type="text" value={display} readOnly></input>
+      <input type="text" value={handleDisplay(memory)} readOnly></input>
 
       <button class="first" onClick={() => handleReset()}>AC</button>
       <button class="first" onClick={() => handleNumber(7)}>7</button>
