@@ -1,16 +1,16 @@
 import { useState } from 'react'
-import './App.css';
+import './App.css'
 
 function App() {
-  const [display, setDisplay] = useState('0');
+  const [display, setDisplay] = useState('0')
 
   const handleClick = (val) => {
-    setDisplay(!val ? '0' : (prev => (prev === '0' ? '' : prev) + val));
+    setDisplay(!val ? '0' : (prev => (prev === '0' ? '' : prev) + val))
   }
 
   const handleCalc = () => {
     try{
-      setDisplay(eval(display));
+      setDisplay(eval(display))
     }catch(e) {
       setDisplay('ERROR?')
     }
@@ -47,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
