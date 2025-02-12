@@ -45,7 +45,7 @@ function App() {
       <button class="second" onClick={() => handleNumber(8)}>8</button>
       <button class="second" onClick={() => handleNumber(5)}>5</button>
       <button class="second" onClick={() => handleNumber(2)}>2</button>
-      <button class="second"></button>
+      <button class="second" onClick={() => handleNumber(0)}>0</button>
 
       <button class="third"></button>
       <button class="third" onClick={() => handleNumber(9)}>9</button>
