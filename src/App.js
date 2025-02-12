@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
@@ -10,16 +10,16 @@ function App() {
       setMemory(val)
       setReset(false)
     } else {
-      setMemory(prev => (prev === '0' ? '' : prev) + String(val))
+      setMemory(prev => filterMemory(prev === '0' ? '' : prev) + String(val))
     }
   }
 
   const handleComma = () => {
-    setMemory(memory + '.')
+    setMemory(filterMemory(memory + '.'))
   }
 
   const handleArithmetic = (val) => {
-    setMemory(memory + String(val))
+    setMemory(filterMemory(memory + String(val)))
   }
 
   const handleCalculation = () => {
@@ -43,6 +43,21 @@ function App() {
       { search: '+', replace: '+' },
       { search: '-', replace: '-' },
       { search: '/', replace: '÷' },
+    ]
+
+    return replacements.reduce(
+      (str, { search, replace }) => str.replaceAll(search, replace), String(memory))
+  }
+
+  const filterMemory = (memory) => {
+
+    // Remove repeating chars
+    const replacements = [
+      { search: '..', replace: '.' },
+      { search: '**', replace: '*' },
+      { search: '++', replace: '+' },
+      { search: '--', replace: '-' },
+      { search: '//', replace: '//' },
     ]
 
     return replacements.reduce(
