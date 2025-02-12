@@ -52,29 +52,29 @@ function App() {
     <div className="App">
       <input type="text" value={handleDisplay(memory)} readOnly></input>
 
-      <button class="first" onClick={() => handleReset()}>AC</button>
-      <button class="first" onClick={() => handleNumber(7)}>7</button>
-      <button class="first" onClick={() => handleNumber(4)}>4</button>
-      <button class="first" onClick={() => handleNumber(1)}>1</button>
-      <button class="first"></button>
+      <button className="first" onClick={() => handleReset()}>AC</button>
+      <button className="first" onClick={() => handleNumber(7)}>7</button>
+      <button className="first" onClick={() => handleNumber(4)}>4</button>
+      <button className="first" onClick={() => handleNumber(1)}>1</button>
+      <button className="first"></button>
 
-      <button class="second"></button>
-      <button class="second" onClick={() => handleNumber(8)}>8</button>
-      <button class="second" onClick={() => handleNumber(5)}>5</button>
-      <button class="second" onClick={() => handleNumber(2)}>2</button>
-      <button class="second" onClick={() => handleNumber(0)}>0</button>
+      <button className="second"></button>
+      <button className="second" onClick={() => handleNumber(8)}>8</button>
+      <button className="second" onClick={() => handleNumber(5)}>5</button>
+      <button className="second" onClick={() => handleNumber(2)}>2</button>
+      <button className="second" onClick={() => handleNumber(0)}>0</button>
 
-      <button class="third"></button>
-      <button class="third" onClick={() => handleNumber(9)}>9</button>
-      <button class="third" onClick={() => handleNumber(6)}>6</button>
-      <button class="third" onClick={() => handleNumber(3)}>3</button>
-      <button class="third" onClick={() => handleComma()}>,</button>
+      <button className="third"></button>
+      <button className="third" onClick={() => handleNumber(9)}>9</button>
+      <button className="third" onClick={() => handleNumber(6)}>6</button>
+      <button className="third" onClick={() => handleNumber(3)}>3</button>
+      <button className="third" onClick={() => handleComma()}>,</button>
 
-      <button class="last" onClick={() => handleArithmetic('/')}>÷</button>
-      <button class="last" onClick={() => handleArithmetic('*')}>×</button>
-      <button class="last" onClick={() => handleArithmetic('-')}>-</button>
-      <button class="last" onClick={() => handleArithmetic('+')}>+</button>
-      <button class="last" onClick={() => handleCalculation()}>=</button>
+      <button className="last" onClick={() => handleArithmetic('/')}>÷</button>
+      <button className="last" onClick={() => handleArithmetic('*')}>×</button>
+      <button className="last" onClick={() => handleArithmetic('-')}>-</button>
+      <button className="last" onClick={() => handleArithmetic('+')}>+</button>
+      <button className="last" onClick={() => handleCalculation()}>=</button>
     </div>
   )
 }
