@@ -14,6 +14,10 @@ function App() {
     }
   }
 
+  const handleComma = () => {
+    setDisplay(display + '.')
+  }
+
   const handleArithmetic = (val) => {
     setDisplay(display + val.toString())
   }
@@ -51,7 +55,7 @@ function App() {
       <button class="third" onClick={() => handleNumber(9)}>9</button>
       <button class="third" onClick={() => handleNumber(6)}>6</button>
       <button class="third" onClick={() => handleNumber(3)}>3</button>
-      <button class="third"></button>
+      <button class="third" onClick={() => handleComma()}>,</button>
 
       <button class="last" onClick={() => handleArithmetic('/')}>÷</button>
       <button class="last" onClick={() => handleArithmetic('*')}>×</button>
