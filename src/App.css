@@ -1,14 +1,3 @@
-.App {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "first second third last";
-  grid-auto-flow: dense;
-  gap: 3px;
-  max-width: 600px;
-  min-height: 400px;
-  margin: 0 auto auto;
-}
-
 button {
   padding: 2.5vh;
   border: 0;

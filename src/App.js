@@ -49,7 +49,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <main>
       <input type="text" value={handleDisplay(memory)} readOnly></input>
 
       <button className="first" onClick={() => handleReset()}>AC</button>
@@ -75,7 +75,7 @@ function App() {
       <button className="last" onClick={() => handleArithmetic('-')}>-</button>
       <button className="last" onClick={() => handleArithmetic('+')}>+</button>
       <button className="last" onClick={() => handleCalculation()}>=</button>
-    </div>
+    </main>
   )
 }
 

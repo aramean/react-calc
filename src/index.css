@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 *:focus {
@@ -16,6 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -23,4 +25,20 @@ body {
 
 body * {
   font-size: 6vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "first second third last";
+  grid-auto-flow: dense;
+  gap: 3px;
+  max-width: 600px;
+  min-height: 400px;
+  margin: 0 auto auto;
+}
+
+footer a {
+  color: #ffffff;
+  font-size: .25em;
 }
