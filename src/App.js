@@ -25,9 +25,10 @@ function App() {
   const handleCalculation = () => {
     try {
       setMemory(eval(memory))
-      setReset(true)
+      setReset(false)
     } catch (e) {
       setMemory('ERROR?')
+      console.error(e)
     }
   }
 
