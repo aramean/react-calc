@@ -57,15 +57,15 @@ function App() {
       <button className="first" onClick={() => handleNumber(7)}>7</button>
       <button className="first" onClick={() => handleNumber(4)}>4</button>
       <button className="first" onClick={() => handleNumber(1)}>1</button>
-      <button className="first"></button>
+      <button className="first disabled"></button>
 
-      <button className="second"></button>
+      <button className="second disabled"></button>
       <button className="second" onClick={() => handleNumber(8)}>8</button>
       <button className="second" onClick={() => handleNumber(5)}>5</button>
       <button className="second" onClick={() => handleNumber(2)}>2</button>
       <button className="second" onClick={() => handleNumber(0)}>0</button>
 
-      <button className="third"></button>
+      <button className="third disabled"></button>
       <button className="third" onClick={() => handleNumber(9)}>9</button>
       <button className="third" onClick={() => handleNumber(6)}>6</button>
       <button className="third" onClick={() => handleNumber(3)}>3</button>
