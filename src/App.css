@@ -24,6 +24,10 @@ input:hover {
   cursor: default;
 }
 
+button.first.clear {
+  font-size: 71%;
+}
+
 button.first {
   grid-column: first;
 }

@@ -68,7 +68,7 @@ function App() {
     <main>
       <input type="text" value={handleDisplay(memory)} readOnly></input>
 
-      <button className="first" onClick={() => handleReset()}>AC</button>
+      <button className="first clear" onClick={() => handleReset()}>AC</button>
       <button className="first" onClick={() => handleNumber(7)}>7</button>
       <button className="first" onClick={() => handleNumber(4)}>4</button>
       <button className="first" onClick={() => handleNumber(1)}>1</button>
