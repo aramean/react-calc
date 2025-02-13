@@ -19,6 +19,9 @@ input {
   grid-column: first / last;
   padding: .3em;
   text-align: right;
+  border-radius: 0;
+  border-color: #ffffff;
+  border-width: 0;
 }
 
 input:hover {

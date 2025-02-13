@@ -65,7 +65,7 @@ function App() {
   }
 
   return (
-    <main>
+    <><main>
       <input type="text" value={handleDisplay(memory)} readOnly></input>
 
       <button className="first clear" onClick={() => handleReset()}>AC</button>
@@ -92,6 +92,9 @@ function App() {
       <button className="last" onClick={() => handleArithmetic('+')}>+</button>
       <button className="last" onClick={() => handleCalculation()}>=</button>
     </main>
+      <footer>
+        <a href="https://github.com/aramean/react-calc" target="_blank">View Source Code on GitHub</a>
+      </footer></>
   )
 }
 
