@@ -34,8 +34,6 @@ main {
   grid-auto-flow: dense;
   gap: 3px;
   max-width: 600px;
-  min-height: 400px;
-  margin: 0 auto auto;
 }
 
 footer a {
